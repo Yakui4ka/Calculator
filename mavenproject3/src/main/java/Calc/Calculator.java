@@ -148,4 +148,4 @@ public class Calculator extends JFrame implements ActionListener {
         });
     }
 }
-///zzzzzZW2
+//Calculator teper' norm
