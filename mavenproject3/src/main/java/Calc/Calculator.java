@@ -1,5 +1,3 @@
-package Calc;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,43 +7,37 @@ public class Calculator extends JFrame implements ActionListener {
     private JTextField display;
     private JLabel history;
     private StringBuilder currentInput;
-    private double accumulator; // Поле для хранения накопленного результата
+    private double accumulator; 
     private String operator;
 
     public Calculator() {
         currentInput = new StringBuilder();
         operator = "";
         accumulator = 0;
-
-        // Set up the frame
+        
         setTitle("Calculator");
         setSize(400, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-
-        // Create the display field
+        
         display = new JTextField();
         display.setFont(new Font("Arial", Font.BOLD, 30));
         display.setEditable(false);
         display.setHorizontalAlignment(JTextField.RIGHT);
-
-        // Create the history label
+        
         history = new JLabel("", SwingConstants.RIGHT);
         history.setFont(new Font("Arial", Font.PLAIN, 18));
-
-        // Create a panel for display and history
+        
         JPanel displayPanel = new JPanel();
         displayPanel.setLayout(new BorderLayout());
         displayPanel.add(history, BorderLayout.NORTH);
         displayPanel.add(display, BorderLayout.CENTER);
 
         add(displayPanel, BorderLayout.NORTH);
-
-        // Create the panel for buttons
+        
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(6, 4)); // Updated to 6 rows for additional buttons
-
-        // Add buttons to the panel
+        
         String[] buttonLabels = {
                 "7", "8", "9", "/",
                 "4", "5", "6", "*",
@@ -118,7 +110,6 @@ public class Calculator extends JFrame implements ActionListener {
             }
         } else {
             if (command.equals(".") && currentInput.toString().contains(".")) {
-                // Не позволять добавлять больше одной десятичной точки
                 return;
             }
             currentInput.append(command);
@@ -148,4 +139,4 @@ public class Calculator extends JFrame implements ActionListener {
         });
     }
 }
-//Calculator teper' norm
+//sssss
